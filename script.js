@@ -1,4 +1,19 @@
+//Оглавление:
 //Циклы
+//ES6 
+
+
+
+
+
+
+
+
+
+//Циклы
+
+
+
 
 //Возвести число ___ в степень____ с использованием цикла while
 /*
@@ -222,6 +237,117 @@ for(var i = 0;i < students.length;i++){
 
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// JS Code - ES6
+
+//-1-
+//обьявление на уровне блоков
+/*
+var a = 2;
+(function ife(){
+    var a = 3;
+    console.log(a);
+})();
+console.log(a);
+*/
+
+
+/*
+var a = 2;
+//Разграничиваем обл видимости
+{
+    let a = 3;
+    console.log(a);
+}
+console.log(a);
+*/
+
+
+
+//-6-
+//Классы
+
+function P(FirstName,LastName){
+    this.FirstName = FirstName;
+    this.LastName = LastName;
+}
+
+const person1 = new P("Василий","Теркин");
+console.log(person);
+
+class Person{
+    constructor(FirstName,LastName){
+        this.FirstName = FirstName;
+        this.LastName = LastName; 
+    }
+}
+
+const person2 = new Person("Вася","Пупкин");
+console.log(person2);
+
+class Children extends Person{
+    constructor(FirstName,LastName,Age){
+        super(FirstName,LastName);
+        this.Age = Age;
+}
+}
+
+const child = new Children("Вася","Пупкин",12);
+console.log(child);
+
+class Boy extends Children{
+    constructor(FirstName,LastName,Age,male){
+        super(FirstName,LastName,Age);
+        this.gender = "male";
+    }
+    get FullName(){
+        return `${this.FirstName} ${this.LastName}`;
+    }
+    setAge(age){
+        this.Age = age;
+    }
+    setName(name){
+        this.FirstName = name;
+        return this.FirstName;
+    }
+    static SayHello(){
+        return "Hello everyone"
+    }
+}
+const boy = new Boy("Вася","Пупкин",12);
+console.log(boy);
+
+console.log(boy.getFullName);
+//console.log(boy.FullName());//ошибка
+
+console.log(Boy.SayHello());
+
+boy.setAge(15);
+console.log(boy);
+
+console.log(boy.setName("Алекс"));
+
+
+
+
+
+
+
+
 
 
 
