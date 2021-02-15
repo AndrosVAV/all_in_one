@@ -255,91 +255,51 @@ for(var i = 0;i < students.length;i++){
 // JS Code - ES6
 
 //-1-
-//обьявление на уровне блоков
+//обьявление на уровне блоков операторы let и const
+
 /*
 var a = 2;
 (function ife(){
-    var a = 3;
-    console.log(a);
+	var a = 3;
+	console.log(a);
 })();
 console.log(a);
-*/
 
 
-/*
+
 var a = 2;
-//Разграничиваем обл видимости
+//Разграничиваем область видимости
 {
-    let a = 3;
-    console.log(a);
+let a = 5;
+console.log(a);
 }
 console.log(a);
+
+
+
+//const
+const a = 2;
+a = 3;
+console.log(a);//ошибка
+
+
+
+const obj = {};
+//obj = 1;
+//console.log(obj);//ошибка
+
+obj.field = 1;
+//console.log(obj);//Object { field: 1 }
+console.log(JSON.stringify(obj));//{"field":1}
+
 */
 
 
 
-//-6-
-//Классы
 
-function P(FirstName,LastName){
-    this.FirstName = FirstName;
-    this.LastName = LastName;
-}
 
-const person1 = new P("Василий","Теркин");
-console.log(person);
 
-class Person{
-    constructor(FirstName,LastName){
-        this.FirstName = FirstName;
-        this.LastName = LastName; 
-    }
-}
 
-const person2 = new Person("Вася","Пупкин");
-console.log(person2);
-
-class Children extends Person{
-    constructor(FirstName,LastName,Age){
-        super(FirstName,LastName);
-        this.Age = Age;
-}
-}
-
-const child = new Children("Вася","Пупкин",12);
-console.log(child);
-
-class Boy extends Children{
-    constructor(FirstName,LastName,Age,male){
-        super(FirstName,LastName,Age);
-        this.gender = "male";
-    }
-    get FullName(){
-        return `${this.FirstName} ${this.LastName}`;
-    }
-    setAge(age){
-        this.Age = age;
-    }
-    setName(name){
-        this.FirstName = name;
-        return this.FirstName;
-    }
-    static SayHello(){
-        return "Hello everyone"
-    }
-}
-const boy = new Boy("Вася","Пупкин",12);
-console.log(boy);
-
-console.log(boy.getFullName);
-//console.log(boy.FullName());//ошибка
-
-console.log(Boy.SayHello());
-
-boy.setAge(15);
-console.log(boy);
-
-console.log(boy.setName("Алекс"));
 
 
 
