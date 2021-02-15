@@ -501,6 +501,80 @@ console.log(plus(50,50));
 
 
 
+// - 6 -   КЛАССЫ
+
+function P(FirstName,LastName){
+	this.FirstName = FirstName;
+	this.LastName = LastName;
+};
+const person1 = new P("Василий","Теркин");
+console.log(person1);
+
+class Person{
+	constructor(FirstName,LastName){
+	this.FirstName = FirstName;
+	this.LastName = LastName;
+	}
+};
+const person2 = new Person("Вася","Пупкин");
+console.log(person2);
+
+
+class Children extends Person{
+	constructor(FirstName,LastName,Age){
+	super(FirstName,LastName);
+	this.Age = Age;
+	}
+};
+const child = new Children("Вася","Пупкин",12);
+console.log(child);
+
+
+
+class Boy extends Children{
+    constructor(FirstName,LastName,Age,male){
+        super(FirstName,LastName,Age);
+        this.gender = "male";
+        }
+    get FullName(){
+        return `${this.LastName} ${this.FirstName}`;
+    }
+    setAge(age){
+        this.Age = Age;
+    }
+    setName(name){
+        this.FirstName = name;
+        return this.FullName;
+    }
+    static SayHello(){
+        return "Hello everyone";
+    }
+    }
+    
+    const boy = new Boy("Вася","Пупкин",12);
+    console.log(boy);
+
+    
+
+console.log(boy.FullName);//Пупкин Вася
+//console.log(boy.FullName());//ошибка
+
+boy.setAge(15);
+console.log(boy);//Object { FirstName: "Вася", LastName: "Пупкин", Age: 15, gender: "male" }
+
+console.log(Boy.SayHello());//Hello everyone
+    
+ console.log(boy.setName("Алекс")); //Пупкин Алекс 
+ 
+ 
+
+
+
+
+
+
+
+
 
   
 
