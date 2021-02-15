@@ -450,6 +450,66 @@ function test({c} = func2()){
 
 
 
+// - 5 -   Cтрелочные функции
+
+/*
+let func = function(){console.log("Hello world")};
+let func2 = () =>(console.log("Hello world!"));
+
+func();
+func2();
+*/
+
+
+/*
+let func = function(msg){console.log(msg)};
+let func2 = msg2 =>console.log(msg2);
+//Если аргументов несколько нужны скобки
+func("мир");
+func2("Мир");
+*/
+
+//  => означает функция возвращает результат выполнения
+
+/*
+    let func = function(msg){
+    console.log(msg);
+    return msg;
+    };
+    let func2 = msg2 =>{
+    console.log(msg2)
+    return msg2
+    };
+    
+    func("Петя");
+    func2("Василий");
+  */
+
+
+/*
+const plus = (a,b) => a + b;
+console.log(plus(50,50));
+*/
+
+//Если возвращает обьект то в круглых скобках
+//const plus = (a,b) => ({"a : hello"});
+
+
+
+
+
+
+
+
+
+  
+
+
+    
+
+
+
+
 
 
 
