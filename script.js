@@ -398,14 +398,51 @@ function n(a = 100,b = plus(w + 12)){
 	console.log(a,b);
 };
 n();
-
-
-
 */
 
 
 
+// - 4 -
+//Диструктурирующее присвоение
 
+/*
+function func1(){
+    return [1,2,3];
+};
+
+function func2(){
+    return {a : 4,b : 5,c :6};
+};
+
+*/
+
+/*
+//Структурное присвоение
+let tmp1 = func1(),
+a1 = tmp1[0],b1 = tmp1[1],c1 = tmp1[2];
+
+let tmp2 = func2(),
+a2 = tmp2.a,b2 = tmp2.b,c2 = tmp2.c;
+
+//console.log("tmp1: ",a1,b1,c1);
+//console.log("tmp2: ",a2,b2,c2);
+*/
+
+/*
+let [a1,b1,c1] = func1();
+console.log("tmp1: ",a1,b1,c1);
+
+//let {a,b,c} = func2();
+//console.log("tmp2: ",a,b,c);
+
+let {b} = func2();
+console.log("tmp2: ",b);
+
+function test({c} = func2()){
+    console.log("tmp2: ",c);
+    }
+    test();
+*/
 
 
 
