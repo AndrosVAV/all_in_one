@@ -503,6 +503,7 @@ console.log(plus(50,50));
 
 // - 6 -   КЛАССЫ
 
+/*
 function P(FirstName,LastName){
 	this.FirstName = FirstName;
 	this.LastName = LastName;
@@ -565,6 +566,38 @@ console.log(boy);//Object { FirstName: "Вася", LastName: "Пупкин", Age
 console.log(Boy.SayHello());//Hello everyone
     
  console.log(boy.setName("Алекс")); //Пупкин Алекс 
+
+*/
+
+
+
+
+
+
+
+// - 7 -   Шаблонные строки
+
+
+let str1 = "Hello";
+console.log("str1: ",str1);//str1:  Hello
+
+let str2 = "world";
+console.log("str2: ",str2);//str2:  world
+
+//let str3 = `${str1} ${str2 }`;
+//console.log("str3: ",str3);//str3:  Hello world
+
+
+const getStr1 = () => srt1;
+const getStr2 = () => srt2;
+
+let str3 = `${str1} ${str2 }`;
+console.log("str3: ",str3);//str3:  Hello world
+
+
+
+
+
  
  
 
