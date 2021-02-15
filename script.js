@@ -254,6 +254,8 @@ for(var i = 0;i < students.length;i++){
 
 // JS Code - ES6
 
+
+
 //-1-
 //обьявление на уровне блоков операторы let и const
 
@@ -270,14 +272,14 @@ console.log(a);
 var a = 2;
 //Разграничиваем область видимости
 {
-let a = 5;
+let a = 5; //let a = 5, b= 6, c = 7;
 console.log(a);
 }
 console.log(a);
 
 
 
-//const
+//const(константа);
 const a = 2;
 a = 3;
 console.log(a);//ошибка
@@ -291,8 +293,47 @@ const obj = {};
 obj.field = 1;
 //console.log(obj);//Object { field: 1 }
 console.log(JSON.stringify(obj));//{"field":1}
+//Менять можно только поля обьекта
+
+
+
+// - 2 - 
+//Операторы spread и rest  (...);
+
+//spread  разделяем массив на элементы
+function n(a,b,c){
+	console.log(`${a} ${b}${c}`);
+}
+n(...["Hello","word","!"]);
+
+
+
+
+//rest   группирует в массив
+
+function n(...args){
+	console.log(args);
+}
+n("Hello","word","!");
+
+
+function n(...args){
+	console.log(args);//Array(6) [ "Hello", "word", "!", 5, 55, 555 ]
+}
+n("Hello","word","!",5,55,555);
 
 */
+
+
+let obj1 = {
+	field1 : "value1",
+	field2 : "value2"
+};
+console.log(obj1);// Object { field1: "value1", field2: "value2" }
+
+
+
+
 
 
 
