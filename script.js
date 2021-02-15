@@ -359,6 +359,53 @@ console.log(obj2);
 // - 3 -
 //Параметры по умолчанию
 
+/*
+function n(a,b){
+	a = a || 10;
+	b = b || 20;
+console.log(a,b);
+};
+n();
+n(15,16);
+
+
+function n2(a = 12,b = 14){
+return console.log(a,b);
+};
+n2();
+*/
+
+
+
+/*
+const w = 11;
+
+function n (a = 10,b = w + 12){
+	console.log(a,b);
+};
+n();
+*/
+
+//Операции в значениях по умолчанию
+/*
+const w = 11;
+
+function plus(arg){
+	return arg + 10;
+};
+
+function n(a = 100,b = plus(w + 12)){
+	console.log(a,b);
+};
+n();
+
+
+
+*/
+
+
+
+
 
 
 
