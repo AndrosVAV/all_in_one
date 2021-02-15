@@ -297,16 +297,18 @@ console.log(JSON.stringify(obj));//{"field":1}
 
 
 
+
+
+
+
 // - 2 - 
-//Операторы spread и rest  (...);
+//Операторы spread и rest  (...);  Для присвоения для работы с параметрами
 
 //spread  разделяем массив на элементы
 function n(a,b,c){
 	console.log(`${a} ${b}${c}`);
 }
 n(...["Hello","word","!"]);
-
-
 
 
 //rest   группирует в массив
@@ -325,11 +327,47 @@ n("Hello","word","!",5,55,555);
 */
 
 
+/*
 let obj1 = {
 	field1 : "value1",
 	field2 : "value2"
 };
 console.log(obj1);// Object { field1: "value1", field2: "value2" }
+
+
+let obj2 = {
+	...obj1,//все поля обьекта obj1
+	fieldN : "valueN"
+};
+console.log(obj2);//Object { field1: "value1", field2: "value2", fieldN: "valueN" }
+
+*/
+
+
+/*
+let obj2 = {
+    ...obj1,
+	field1 : "value fixed",  //если мы хотим поменять значение
+	fieldN : "valueN"
+};
+console.log(obj2);
+*/
+
+
+
+
+// - 3 -
+//Параметры по умолчанию
+
+
+
+
+
+
+
+
+
+
 
 
 
