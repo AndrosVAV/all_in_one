@@ -669,6 +669,8 @@ var response = [
 var array = [1,2,3,4,5,6,7,8,9,10];
 var newArray = [];
 var counter = 0;
+var flattened = [[0,1],[2,3],[4,5]];
+
 
 /*
 array.forEach(function(elem){
@@ -819,7 +821,104 @@ console.log(newArray);//true т.к. почта есть у всех
 
 
 
+
+
+//  - 5 -  reduce  reduceRight
+
+
+/*
+newArray = array.reduce(function(sum,elem){
+    return sum += elem;
+    })
+    console.log(newArray);//49
     
+*/
+
+
+/*
+newArray = array.reduce(function(sum,elem){
+    return sum += elem;
+    },0)
+    console.log(newArray);//49
+ */
+
+ 
+
+ 
+
+/*
+newArray = array.reduce(function(sum,elem){
+    return sum += elem;
+    },10)
+    console.log(newArray);//59
+ */
+
+
+
+//Очень похоже на spread оператор в ES6
+/*
+newArray = flattened.reduce(function(sum,elem){
+    return sum.concat(elem);
+    })
+    console.log(newArray);//Array(6) [ 0, 1, 2, 3, 4, 5 ]
+ */
+
+
+
+
+
+ 
+var friends = [
+    {name : "Anna",books : ["Bible","Harry Potter"]},
+    {name : "Bob",books : ["War and peace","Romeo and juliet"]},
+    {name : "Alice",books : ["The Lord of the Rings","Shining"]}
+    ];
+    
+    
+    
+    /*
+    newArray = friends.reduce(function(sum,elem){
+        //console.log(sum);//Object { name: "Anna", books: (2) […] }
+        return sum.concat(elem);
+        })
+        console.log(newArray);//ошибка
+     */
+
+/*
+     newArray = friends.reduce(function(sum,elem){
+        
+        return sum.concat(elem.books);
+        },["1984"])
+        console.log(newArray);
+
+*/
+
+
+/*
+
+        newArray = friends.reduceRight(function(sum,elem){
+        
+            return sum.concat(elem.books);
+            },["1984"])
+            console.log(newArray);
+*/
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+ 
 
 
 
