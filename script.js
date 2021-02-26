@@ -577,7 +577,7 @@ console.log(Boy.SayHello());//Hello everyone
 
 // - 7 -   Шаблонные строки
 
-
+/*
 let str1 = "Hello";
 console.log("str1: ",str1);//str1:  Hello
 
@@ -594,12 +594,7 @@ const getStr2 = () => srt2;
 let str3 = `${str1} ${str2 }`;
 console.log("str3: ",str3);//str3:  Hello world
 
-
-
-
-
- 
- 
+*/
 
 
 
@@ -607,9 +602,221 @@ console.log("str3: ",str3);//str3:  Hello world
 
 
 
+//Е Ковальчук Перебирающие методы массивов
+//фУНКЦИИ ВЫСШЕГО ПОРЯДКА
+
+//    - 1 - (forEach)
+
+var response = [
+    {
+        index : 0,
+        isActive : true,
+        age : 20,
+        name : "Langley Morton",
+        gender : "male",
+        email : "langleyMorton@gmail.com"
+
+    },
+    {
+        index : 1,
+        isActive : true,
+        age : 20,
+        name : "Terry Cook",
+        gender : "female",
+        email : "terrycook@gmail.com"
+
+    },
+    {
+        index : 2,
+        isActive : false,
+        age : 36,
+        name : "Tricia Meadows",
+        gender : "female",
+        email : "triciameadows@gmail.com"
+
+    },
+    {
+        index : 3,
+        isActive : true,
+        age : 37,
+        name : "Logan Huff",
+        gender : "male",
+        email : "loganhuff@gmail.com"
+
+    },
+    {
+        index : 4,
+        isActive : false,
+        age : 40,
+        name : "Elsa Hogan",
+        gender : "famale",
+        email : "elsahogan@gmail.com"
+
+    },
+    {
+        index : 5,
+        isActive : true,
+        age : 22,
+        name : "Frances Mosley",
+        gender : "male",
+        email : "francesmosley@gmail.com"
+
+    }
+];
 
 
-  
+
+var array = [1,2,3,4,5,6,7,8,9,10];
+var newArray = [];
+var counter = 0;
+
+/*
+array.forEach(function(elem){
+    newArray.push(elem *= elem);
+});
+console.log(newArray);
+*/
+
+/*
+newArray = array.forEach(function(elem){
+	return elem *= elem;
+    //newArray.push(elem *= elem);
+});
+console.log(newArray);
+*/
+
+
+
+
+/*
+newArray = array.forEach(function(elem){
+	counter += elem;
+    
+});
+console.log(counter);
+*/
+
+
+var getNames = function(elem){
+    newArray.push(elem.name);
+}
+
+
+//response.forEach(getNames);
+//console.log(newArray);
+
+
+
+
+
+//    - 2 -  map
+
+
+
+/*
+newArray = array.map(function(elem){
+    return elem *= elem;
+});
+
+ //console.log(newArray);//Array(10) [ 1, 4, 9, 16, 25, 36, 49, 64, 81, 100 ]
+
+
+*/
+
+
+
+
+/*
+ newArray = response.map(function(elem){
+    return{
+         name : elem.name,
+         email : elem.mail
+    }
+});
+
+//console.log(newArray);
+
+*/
+
+
+
+
+
+//  - 3 -    filter
+
+
+
+
+/*
+newArray = array.filter(function(elem){
+    return elem % 2;
+});
+
+ //console.log(newArray);//Array(5) [ 1, 3, 5, 7, 9 ]
+*/
+
+
+
+
+/*
+newArray = array.filter(function(elem){
+    return elem % 3 && elem !== 1;
+});
+
+//console.log(newArray);//Array(6) [ 2, 4, 5, 7, 8, 10 ]
+
+*/
+
+
+
+/*
+newArray = response.filter(function(elem){
+//return elem.isActive;
+return elem.age > 30;
+})
+
+//console.log(newArray);
+
+*/
+
+
+
+
+
+
+
+//  - 4 - every  some
+
+/*
+newArray = array.some(function(elem){
+return elem > 0;
+})
+//console.log(newArray);//true
+
+
+
+
+newArray = array.every(function(elem){
+return elem > 0;
+})
+//console.log(newArray);//false
+
+*/
+
+
+
+/*
+newArray = response.every(function(elem){
+return elem.email;
+})
+console.log(newArray);//true т.к. почта есть у всех
+
+//если закоментировать почту одного usera
+//console.log(newArray);//false т.к. почты у одного usera нет 
+
+*/
+
+
 
 
     
